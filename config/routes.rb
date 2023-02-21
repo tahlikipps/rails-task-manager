@@ -13,12 +13,10 @@ Rails.application.routes.draw do
   # VIEW DETAILS OF TASK
   get "/tasks/:id", to: "tasks#details", as: "task"
 
-
-
   # EDIT A TASK
-  # get "/tasks/:id/edit", to: "tasks#edit", as: "task"
-  # patch "/tasks/:id", to: "tasks#update"
+  get "/tasks/:id/edit", to: "tasks#edit", as: "edit"
+  patch "/tasks/:id", to: "tasks#update"
 
   # REMOVE A TASK
-  # delete "/tasks/:id", to: "tasks#destroy"
+  delete "/tasks/:id", to: "tasks#destroy"
 end
