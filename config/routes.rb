@@ -6,12 +6,14 @@ Rails.application.routes.draw do
   # LIST TASKS
   get "/tasks", to: "tasks#index"
 
-  # VIEW DETAILS OF TASK
-  get "/tasks/:id", to: "tasks#details", as: "task"
-
   # ADD A NEW TASK
   get "/tasks/new", to: "tasks#new"
   post "/tasks", to: "tasks#create"
+
+  # VIEW DETAILS OF TASK
+  get "/tasks/:id", to: "tasks#details", as: "task"
+
+
 
   # EDIT A TASK
   # get "/tasks/:id/edit", to: "tasks#edit", as: "task"
