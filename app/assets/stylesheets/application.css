@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+ .body-container {
+  margin: 15px;
+  font-family: 'Roboto';
+ }
+.tasks-container li {
+  margin-bottom: 10px;
+}
+.tasks-container a {
+  text-decoration: none;
+  color: rgb(1, 1, 99);
+}
+
+.task-form {
+  width:50%;
+  margin-left: 10px;
+}
+
+.task-form > label {
+  font-size: x-small;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.task-form > input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.task-details {
+  width:50%;
+  padding: 25px;
+  background-color: white;
+  font-size: larger;
+}

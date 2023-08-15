@@ -1,9 +1,16 @@
-<%= form_with model: task do |f| %>
-  <%= f.label :title %>
+<%= form_with model: task, class: 'task-form' do |f| %>
+  <%= f.label :title, class: 'form-label'%>
+  <br>
   <%= f.text_field :title, placeholder: "Type the task title" %>
-  <%= f.label :details %>
+  <br>
+  <%= f.label :details, class: 'form-label' %>
+  <br>
   <%= f.text_field :details, placeholder: "Type the task description" %>
-  <%= f.label :completed %>
-  <%= f.check_box :completed %>
+  <br>
+  <% unless task.new_record? %>
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+  <% end %>
+  <br>
   <%= f.submit %>
 <% end %>
